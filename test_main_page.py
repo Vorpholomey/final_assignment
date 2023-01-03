@@ -26,7 +26,3 @@ def test_register_login_form_and_link(browser):
 
 
 
-#    page.should_be_login_link()      # проверяем, что есть ссылка, которая ведет на логин 
-#    page.should_be_login_link()      # проверяем, что есть ссылка, которая ведет на логин 
-#    page.should_be_login_link()      # проверяем, что есть ссылка, которая ведет на логин 
-#    page.should_be_login_link()      # проверяем, что есть ссылка, которая ведет на логин 
