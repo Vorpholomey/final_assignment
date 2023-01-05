@@ -4,7 +4,7 @@ from .base_page import BasePage
 #from .locators import MainPageLocators
 #from .locators import LoginPageLocators
 from .locators import ProductPageLocators
-#from .login_page import LoginPage
+
 
 
 class ProductPage(BasePage):
@@ -22,5 +22,11 @@ class ProductPage(BasePage):
         first_book_price = self.browser.find_element(*ProductPageLocators.BOOK_PRICE)
         second_book_price = self.browser.find_element(*ProductPageLocators.BOOK_PRICE_ADD)
         assert first_book_price.text == second_book_price.text, "Book price is different"
+
+    def should_not_be_success_message(self):
+        assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
+           "Success message is presented, but should not be"
     
-    
+    def should_disappeared_success_message(self):
+        assert self.is_disappeared(*ProductPageLocators.SUCCESS_MESSAGE), \
+           "Success message is presented, but should not be"    
